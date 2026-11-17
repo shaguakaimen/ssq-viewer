@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow,noarchive">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; frame-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>私人号码看板</title>
+  <style>
+    *{box-sizing:border-box}[hidden]{display:none!important}body{margin:0;min-height:100dvh;background:#f3f6f9;color:#1d344b;font-family:"Microsoft YaHei","Segoe UI",sans-serif}.entry{min-height:100dvh;display:grid;place-items:center;padding:24px 18px}.card{width:100%;max-width:420px;border:1px solid #dfe7ef;border-radius:18px;padding:32px 26px;background:white;box-shadow:0 18px 50px #1d344b0a}.eyebrow{font-size:13px;color:#667e94}h1{font-size:25px;margin:14px 0 12px}p{color:#66788a;font-size:14px;line-height:1.8}label{display:block;margin:24px 0 9px;font-size:14px;font-weight:600}input,button{width:100%;padding:13px;border-radius:9px;font:inherit}input{border:1px solid #b9cad9;background:#fafcfe}input:focus{outline:2px solid #8eb7dd}button{margin-top:15px;border:0;background:#244f78;color:white;font-weight:600;cursor:pointer}button:disabled{opacity:.65;cursor:wait}.status{min-height:24px;color:#a23c34;font-size:13px}.note{font-size:12px;margin-top:22px}iframe{display:block;border:0;width:100%;min-height:100dvh;background:#f4f6f8}
+  </style>
+</head>
+<body>
+  <main id="entry" class="entry">
+    <section class="card">
+      <span class="eyebrow">仅限获邀的朋友</span>
+      <h1>私人号码看板</h1>
+      <p>输入共用访问密码，解锁最新开奖、号码参考和匹配记录。</p>
+      <form id="unlock-form">
+        <label for="password">访问密码</label>
+        <input id="password" name="password" type="password" autocomplete="current-password" required maxlength="256" autofocus>
+        <button id="unlock" type="submit">解锁看板</button>
+        <p id="status" class="status" role="status" aria-live="polite"></p>
+      </form>
+      <p class="note">内容在此浏览器中解密。关闭或刷新页面后，需要重新输入密码。</p>
+    </section>
+  </main>
+  <div id="dashboard" hidden></div>
+  <script type="module" src="app.mjs"></script>
+</body>
+</html>
